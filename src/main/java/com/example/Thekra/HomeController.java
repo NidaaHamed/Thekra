@@ -9,4 +9,18 @@ public class HomeController {
     public String welcomePage(){
         return "Welcome";
     }
+    @GetMapping("/admin")
+    public String adminPage(){
+        return "Welcome Admin";
+    }
+    @GetMapping("/teacher")
+    public String teacherPage(){
+        return "Welcome Teacher";
+    }
+    @GetMapping("/student")
+    public String studentPage(){
+        return "Welcome Student";
+    }
+
+
 }
