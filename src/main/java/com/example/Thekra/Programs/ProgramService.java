@@ -15,4 +15,7 @@ public class ProgramService {
     public List<Program> getAllPrograms(){
         return programs;
     }
+    public Program getProgram(String id){
+        return programs.stream().filter(program -> program.getId().equals(id)).findFirst().get();
+    }
 }
