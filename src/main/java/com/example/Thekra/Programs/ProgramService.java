@@ -22,4 +22,13 @@ public class ProgramService {
     public void addProgram(Program p){
         programs.add(p);
     }
+    public void updateProgram(Program p,String id){
+        for(int i=0 ; i<programs.size();i++){
+            Program program = programs.get(i);
+            if(program.getId().equals(id)){
+                programs.set(i,p);
+                return;
+            }
+        }
+    }
 }

@@ -22,5 +22,9 @@ public class ProgramController {
     public void addProgram(@RequestBody Program program){
         programService.addProgram(program);
     }
+    @RequestMapping(method=RequestMethod.PUT,value="/programs/{id}")
+    public void updateProgram(@RequestBody Program program,@PathVariable String id){
+        programService.updateProgram(program,id);
+    }
 
 }
