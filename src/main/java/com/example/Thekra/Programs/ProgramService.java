@@ -31,4 +31,8 @@ public class ProgramService {
             }
         }
     }
+
+    public void deleteProgram(String id) {
+        programs.removeIf(p-> p.getId().equals(id));
+    }
 }

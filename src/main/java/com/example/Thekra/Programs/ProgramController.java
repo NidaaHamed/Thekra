@@ -26,5 +26,9 @@ public class ProgramController {
     public void updateProgram(@RequestBody Program program,@PathVariable String id){
         programService.updateProgram(program,id);
     }
+    @RequestMapping(method=RequestMethod.DELETE,value="/programs/{id}")
+    public void deleteProgram(@PathVariable String id){
+        programService.deleteProgram(id);
+    }
 
 }
