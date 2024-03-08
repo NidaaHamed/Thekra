@@ -1,22 +1,25 @@
 package com.example.Thekra.Programs;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+@Entity
 public class Program {
+    @Id
     private String id;
+    private String programName;
+    private String description;
 
     public Program() {
 
     }
     public Program(String id, String programName, String description) {
+        super();
         this.id = id;
         this.programName = programName;
         this.description = description;
     }
-
-    private String programName;
-    private String description;
-
-
-
     public String getId() {
         return id;
     }

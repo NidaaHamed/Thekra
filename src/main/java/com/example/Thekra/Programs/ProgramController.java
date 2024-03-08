@@ -3,8 +3,8 @@ package com.example.Thekra.Programs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class ProgramController {
@@ -15,7 +15,7 @@ public class ProgramController {
         return programService.getAllPrograms();
     }
     @RequestMapping("/programs/{id}")
-    public Program getProgram(@PathVariable String id){
+    public Optional<Program> getProgram(@PathVariable String id){
         return programService.getProgram(id);
     }
     @RequestMapping(method=RequestMethod.POST,value="/programs")
