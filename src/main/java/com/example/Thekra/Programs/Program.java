@@ -2,11 +2,14 @@ package com.example.Thekra.Programs;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Entity
+@Table(name = "programs")
 public class Program {
     @Id
+
     private String id;
     private String programName;
     private String description;

@@ -21,8 +21,9 @@ public class SecurityConfiguration {
                         .requestMatchers("/admin").hasRole("ADMIN")
                         .requestMatchers("/teacher").hasAnyRole("ADMIN","TEACHER")
                         .requestMatchers("/student").hasAnyRole("ADMIN","STUDENT")
-                        .requestMatchers("/*").permitAll()
-                        .anyRequest().authenticated()
+                        .requestMatchers("/actuator/**").permitAll()
+                        .requestMatchers("/").permitAll()
+//                        .anyRequest().authenticated()
                 )
                 .formLogin((form) -> form
                         .loginPage("/login")
